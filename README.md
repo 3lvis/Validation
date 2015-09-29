@@ -1,5 +1,7 @@
 # Validation
 
+A simple type to perform validations on Strings.
+
 #### Maximum or/and minimum length
 
 ```swift
