@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Validation"
-  s.summary          = "A short description of Validation."
+  s.summary          = "Validations for min/max value, min/max length, regex and so on"
   s.version          = "0.1.0"
   s.homepage         = "https://github.com/3lvis/Validation"
   s.license          = 'MIT'
@@ -10,6 +10,5 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.requires_arc = true
   s.source_files = 'Source/**/*'
-# s.frameworks = 'UIKit', 'MapKit'
-# s.dependency 'AFNetworking', '~> 2.3'
+  s.frameworks = 'Foundation'
 end
