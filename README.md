@@ -10,7 +10,8 @@ struct Validation {
     var maximumValue: Double?
     var minimumValue: Double?
     var required: Bool?
-}```
+}
+```
 
 #### Maximum or/and minimum length
 
