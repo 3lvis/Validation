@@ -2,6 +2,16 @@
 
 A simple type to perform validations on Strings.
 
+```swift
+struct Validation {
+    var format: String?
+    var maximumLength: Int?
+    var minimumLength: Int?
+    var maximumValue: Double?
+    var minimumValue: Double?
+    var required: Bool?
+}```
+
 #### Maximum or/and minimum length
 
 ```swift
