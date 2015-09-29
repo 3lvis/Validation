@@ -13,6 +13,16 @@ struct Validation {
 }
 ```
 
+### API
+
+Making exhaustive `false` will cause `minimumLength`, `minimumValue` and `format` to be ignored this is useful for partial validations, or validations where the final string is in process of been completed. For example when entering characters into an UITextField. With exhaustive `true` all validations will be run.
+
+```swift
+public func validateString(string: String, exhaustive: Bool = true) -> Bool
+```
+
+### Examples
+
 #### Maximum or/and minimum length
 
 ```swift
@@ -56,14 +66,6 @@ validation.format = "[\\w._%+-]+@[\\w.-]+\\.\\w{2,}"
 validation.validateString("elvisnunez@me.co") // => returns true
 validation.validateString("elvnume.co") // => returns false
 validation.validateString("hi there elvisnunez@me.com") // => returns false
-```
-
-#### API
-
-Making exhaustive `false` will cause `minimumLength`, `minimumValue` and `format` to be ignored this is useful for partial validations, or validations where the final string is in process of been completed. For example when entering characters into an UITextField. With exhaustive `true` all validations will be run.
-
-```swift
-public func validateString(string: String, exhaustive: Bool = true) -> Bool
 ```
 
 ## Installation
