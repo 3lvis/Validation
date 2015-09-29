@@ -34,6 +34,8 @@ validation.validateString("12345") // => returns true
 validation.validateString("") // => returns false
 ```
 
+#### Format (regex)
+
 ```swift
 var validation = Validation()
 validation.format = "[\\w._%+-]+@[\\w.-]+\\.\\w{2,}"
