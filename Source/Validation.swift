@@ -10,17 +10,17 @@ public struct Validation {
 
     public init() { }
 
-    // Making exhaustive false will cause minimumLength, minimumValue and format to be ignored
+    // Making complete false will cause minimumLength, minimumValue and format to be ignored
     // this is useful for partial validations, or validations where the final string is
     // in process of been completed. For example when entering characters into an UITextField
-    public func validateString(string: String, exhaustive: Bool = true) -> Bool {
+    public func validateString(string: String, complete: Bool = true) -> Bool {
         var valid = true
 
         if let maximumLength = self.maximumLength {
             valid = (string.characters.count <= maximumLength)
         }
 
-        if valid && exhaustive {
+        if valid && complete {
             var minimumLength: Int? = nil
 
             if let required = self.required where required == true {
@@ -44,7 +44,7 @@ public struct Validation {
                     valid = (number.doubleValue <= maximumValue)
                 }
 
-                if valid && exhaustive {
+                if valid && complete {
                     if let minimumValue = self.minimumValue {
                         valid = (number.doubleValue >= minimumValue)
                     }
@@ -52,7 +52,7 @@ public struct Validation {
             }
         }
 
-        if valid && exhaustive {
+        if valid && complete {
             if let format = self.format {
                 let regex = try! NSRegularExpression(pattern: format, options: .CaseInsensitive)
                 let range = regex.rangeOfFirstMatchInString(string, options: .ReportProgress, range: NSRange(location: 0, length: string.characters.count))

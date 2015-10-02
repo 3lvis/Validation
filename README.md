@@ -15,10 +15,10 @@ struct Validation {
 
 ### API
 
-Making exhaustive `false` will cause `minimumLength`, `minimumValue` and `format` to be ignored this is useful for partial validations, or validations where the final string is in process of been completed. For example when entering characters into an UITextField. With exhaustive `true` all validations will be run.
+Making complete `false` will cause `minimumLength`, `minimumValue` and `format` to be ignored this is useful for partial validations, or validations where the final string is in process of been completed. For example when entering characters into an UITextField. With complete `true` all validations will be run.
 
 ```swift
-func validateString(string: String, exhaustive: Bool = true) -> Bool
+func validateString(string: String, complete: Bool = true) -> Bool
 ```
 
 ### Examples

@@ -30,10 +30,10 @@ class Tests: XCTestCase {
         XCTAssertTrue(validation.validateString("123456"))
         XCTAssertFalse(validation.validateString("1234567"))
 
-        XCTAssertTrue(validation.validateString("1234", exhaustive: false))
-        XCTAssertTrue(validation.validateString("12345", exhaustive: false))
-        XCTAssertTrue(validation.validateString("123456", exhaustive: false))
-        XCTAssertFalse(validation.validateString("1234567", exhaustive: false))
+        XCTAssertTrue(validation.validateString("1234", complete: false))
+        XCTAssertTrue(validation.validateString("12345", complete: false))
+        XCTAssertTrue(validation.validateString("123456", complete: false))
+        XCTAssertFalse(validation.validateString("1234567", complete: false))
     }
 
     func testMaximumValueValidation() {
@@ -64,10 +64,10 @@ class Tests: XCTestCase {
         XCTAssertTrue(validation.validateString("6"))
         XCTAssertFalse(validation.validateString("7"))
 
-        XCTAssertTrue(validation.validateString("4", exhaustive: false))
-        XCTAssertTrue(validation.validateString("5", exhaustive: false))
-        XCTAssertTrue(validation.validateString("6", exhaustive: false))
-        XCTAssertFalse(validation.validateString("7", exhaustive: false))
+        XCTAssertTrue(validation.validateString("4", complete: false))
+        XCTAssertTrue(validation.validateString("5", complete: false))
+        XCTAssertTrue(validation.validateString("6", complete: false))
+        XCTAssertFalse(validation.validateString("7", complete: false))
     }
 
     func testRequiredValidation() {
@@ -86,8 +86,8 @@ class Tests: XCTestCase {
         XCTAssertFalse(validation.validateString("elvnume.co"))
         XCTAssertFalse(validation.validateString("hi there elvisnunez@me.com"))
 
-        XCTAssertTrue(validation.validateString("elvisnunez@me.co", exhaustive: false))
-        XCTAssertTrue(validation.validateString("elvnume.co", exhaustive: false))
-        XCTAssertTrue(validation.validateString("hi there elvisnunez@me.com", exhaustive: false))
+        XCTAssertTrue(validation.validateString("elvisnunez@me.co", complete: false))
+        XCTAssertTrue(validation.validateString("elvnume.co", complete: false))
+        XCTAssertTrue(validation.validateString("hi there elvisnunez@me.com", complete: false))
     }
 }
