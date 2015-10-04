@@ -2,6 +2,15 @@ import UIKit
 import XCTest
 
 class Tests: XCTestCase {
+    func testEmptyValidation() {
+        let validation = Validation()
+
+        XCTAssertTrue(validation.validateString("1233"))
+        XCTAssertTrue(validation.validateString("1234"))
+        XCTAssertTrue(validation.validateString("12345"))
+        XCTAssertTrue(validation.validateString("123456"))
+    }
+
     func testMaximumLengthValidation() {
         var validation = Validation()
         validation.maximumLength = 5
