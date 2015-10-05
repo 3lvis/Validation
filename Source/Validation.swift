@@ -7,6 +7,7 @@ public struct Validation {
     public var maximumValue: Double? = nil
     public var minimumValue: Double? = nil
     public var required: Bool? = nil
+    public var characterSet: NSCharacterSet? = nil
 
     public init() { }
 
@@ -52,6 +53,13 @@ public struct Validation {
             }
         }
 
+        if valid {
+            if let characterSet = self.characterSet {
+                let stringCharacterSet = NSCharacterSet(charactersInString: string)
+                valid = characterSet.isSupersetOfSet(stringCharacterSet)
+            }
+        }
+
         if valid && complete {
             if let format = self.format {
                 let regex = try! NSRegularExpression(pattern: format, options: .CaseInsensitive)
@@ -59,7 +67,7 @@ public struct Validation {
                 valid = (range.location == 0 && range.length == string.characters.count)
             }
         }
-        
+
         return valid
     }
 }

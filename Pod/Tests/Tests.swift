@@ -99,4 +99,13 @@ class Tests: XCTestCase {
         XCTAssertTrue(validation.validateString("elvnume.co", complete: false))
         XCTAssertTrue(validation.validateString("hi there elvisnunez@me.com", complete: false))
     }
+
+    func testCharacterSetValidation() {
+        var validation = Validation()
+        validation.characterSet = NSMutableCharacterSet.decimalDigitCharacterSet()
+
+        XCTAssertTrue(validation.validateString(""))
+        XCTAssertTrue(validation.validateString("232132"))
+        XCTAssertFalse(validation.validateString("elvnume.co"))
+    }
 }
