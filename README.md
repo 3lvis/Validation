@@ -4,12 +4,13 @@ A simple type to perform validations on Strings.
 
 ```swift
 struct Validation {
-    var format: String?
-    var maximumLength: Int?
+    var required: Bool?
     var minimumLength: Int?
+    var maximumLength: Int?
     var maximumValue: Double?
     var minimumValue: Double?
-    var required: Bool?
+    var characterSet: NSCharacterSet?
+    var format: String?
 }
 ```
 
@@ -22,6 +23,16 @@ func validateString(string: String, complete: Bool = true) -> Bool
 ```
 
 ### Examples
+
+#### Required (short hand for minimum value: 1)
+
+```swift
+var validation = Validation()
+validation.required = true
+
+validation.validateString("12345") // => returns true
+validation.validateString("") // => returns false
+```
 
 #### Maximum or/and minimum length
 
@@ -47,14 +58,14 @@ validation.validateString("5") // => returns true
 validation.validateString("7") // => returns false
 ```
 
-#### Required (short hand for minimum value: 1)
+#### NSCharacterSet
 
 ```swift
 var validation = Validation()
-validation.required = true
+validation.characterSet = NSCharacterSet.decimalDigitCharacterSet()
 
-validation.validateString("12345") // => returns true
-validation.validateString("") // => returns false
+validation.validateString("23213") // => returns true
+validation.validateString("hi there") // => returns false
 ```
 
 #### Format (regex)
