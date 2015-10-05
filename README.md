@@ -62,7 +62,7 @@ validation.validateString("7") // => returns false
 
 ```swift
 var validation = Validation()
-validation.characterSet = NSCharacterSet.decimalDigitCharacterSet() // Example: Characteres from 0-9 more info on [NSCharacterSet](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSCharacterSet_Class/)
+validation.characterSet = NSCharacterSet.decimalDigitCharacterSet()
 
 validation.validateString("23213") // => returns true
 validation.validateString("hi there") // => returns false
