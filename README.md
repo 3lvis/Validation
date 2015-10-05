@@ -61,12 +61,8 @@ validation.validateString("7") // => returns false
 #### NSCharacterSet
 
 ```swift
-/*
- NSCharacterSet.decimalDigitCharacterSet(): This set is the set of all characters used to represent the decimal values 0 through 9.
-*/
-
 var validation = Validation()
-validation.characterSet = NSCharacterSet.decimalDigitCharacterSet()
+validation.characterSet = NSCharacterSet.decimalDigitCharacterSet() // Example: Characteres from 0-9 more info on [NSCharacterSet](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSCharacterSet_Class/)
 
 validation.validateString("23213") // => returns true
 validation.validateString("hi there") // => returns false
