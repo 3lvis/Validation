@@ -4,13 +4,13 @@ A simple type to perform validations on Strings.
 
 ```swift
 struct Validation {
-    var required: Bool? = nil
-    var minimumLength: Int? = nil
-    var maximumLength: Int? = nil
-    var maximumValue: Double? = nil
-    var minimumValue: Double? = nil
-    var characterSet: NSCharacterSet? = nil
-    var format: String? = nil
+    var required: Bool?
+    var minimumLength: Int?
+    var maximumLength: Int?
+    var maximumValue: Double?
+    var minimumValue: Double?
+    var characterSet: NSCharacterSet?
+    var format: String?
 }
 ```
 
