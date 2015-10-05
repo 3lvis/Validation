@@ -61,6 +61,10 @@ validation.validateString("7") // => returns false
 #### NSCharacterSet
 
 ```swift
+/*
+ NSCharacterSet.decimalDigitCharacterSet(): This set is the set of all characters used to represent the decimal values 0 through 9.
+*/
+
 var validation = Validation()
 validation.characterSet = NSCharacterSet.decimalDigitCharacterSet()
 
