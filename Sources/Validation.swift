@@ -8,7 +8,7 @@ public class Validation: NSObject {
     public var minimumValue: Double? = nil
     public var characterSet: NSCharacterSet? = nil
     public var format: String? = nil
-    
+
     // Making complete false will cause minimumLength, minimumValue and format to be ignored
     // this is useful for partial validations, or validations where the final string is
     // in process of been completed. For example when entering characters into an UITextField
