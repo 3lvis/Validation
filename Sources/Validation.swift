@@ -1,6 +1,6 @@
 import Foundation
 
-public class Validation: NSObject {
+public struct Validation {
     public var required: Bool? = nil
     public var minimumLength: Int? = nil
     public var maximumLength: Int? = nil
@@ -8,6 +8,8 @@ public class Validation: NSObject {
     public var minimumValue: Double? = nil
     public var characterSet: NSCharacterSet? = nil
     public var format: String? = nil
+
+    public init() { }
 
     // Making complete false will cause minimumLength, minimumValue and format to be ignored
     // this is useful for partial validations, or validations where the final string is

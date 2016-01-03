@@ -13,7 +13,7 @@ class Tests: XCTestCase {
     }
 
     func testMaximumLengthValidation() {
-        let validation = Validation()
+        var validation = Validation()
         validation.maximumLength = 5
 
         XCTAssertTrue(validation.validateString("1234"))
@@ -22,7 +22,7 @@ class Tests: XCTestCase {
     }
 
     func testMinimumLengthValidation() {
-        let validation = Validation()
+        var validation = Validation()
         validation.minimumLength = 5
 
         XCTAssertFalse(validation.validateString("1234"))
@@ -31,7 +31,7 @@ class Tests: XCTestCase {
     }
 
     func testBetweenLengthsValidation() {
-        let validation = Validation()
+        var validation = Validation()
         validation.minimumLength = 5
         validation.maximumLength = 6
 
@@ -47,7 +47,7 @@ class Tests: XCTestCase {
     }
 
     func testMaximumValueValidation() {
-        let validation = Validation()
+        var validation = Validation()
         validation.maximumValue = 100
 
         XCTAssertTrue(validation.validateString("50"))
@@ -56,7 +56,7 @@ class Tests: XCTestCase {
     }
 
     func testMinimumValueValidation() {
-        let validation = Validation()
+        var validation = Validation()
         validation.minimumValue = 100
 
         XCTAssertFalse(validation.validateString("50"))
@@ -65,7 +65,7 @@ class Tests: XCTestCase {
     }
 
     func testBetweenValuesValidation() {
-        let validation = Validation()
+        var validation = Validation()
         validation.minimumValue = 5
         validation.maximumValue = 6
 
@@ -81,7 +81,7 @@ class Tests: XCTestCase {
     }
 
     func testRequiredValidation() {
-        let validation = Validation()
+        var validation = Validation()
         validation.required = true
 
         XCTAssertTrue(validation.validateString("12345"))
@@ -89,7 +89,7 @@ class Tests: XCTestCase {
     }
 
     func testEmailFormatValidation() {
-        let validation = Validation()
+        var validation = Validation()
         validation.format = "[\\w._%+-]+@[\\w.-]+\\.\\w{2,}"
 
         XCTAssertTrue(validation.validateString("elvisnunez@me.co"))
@@ -102,7 +102,7 @@ class Tests: XCTestCase {
     }
 
     func testCharacterSetValidation() {
-        let validation = Validation()
+        var validation = Validation()
         validation.characterSet = NSCharacterSet.decimalDigitCharacterSet()
 
         XCTAssertTrue(validation.validateString(""))
