@@ -3,7 +3,7 @@
 A simple type to perform validations on Strings.
 
 ```swift
-struct Validation {
+class Validation {
     var required: Bool?
     var minimumLength: Int?
     var maximumLength: Int?
