@@ -1,6 +1,5 @@
 import UIKit
 import XCTest
-import Validation
 
 class Tests: XCTestCase {
     func testEmptyValidation() {
