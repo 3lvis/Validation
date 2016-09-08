@@ -102,7 +102,7 @@ class Tests: XCTestCase {
 
     func testCharacterSetValidation() {
         var validation = Validation()
-        validation.characterSet = NSCharacterSet.decimalDigitCharacterSet()
+        validation.characterSet = NSCharacterSet.decimalDigits as NSCharacterSet?
 
         XCTAssertTrue(validation.validateString(""))
         XCTAssertTrue(validation.validateString("232132"))
