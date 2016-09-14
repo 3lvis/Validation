@@ -6,7 +6,7 @@ public struct Validation {
     public var maximumLength: Int? = nil
     public var maximumValue: Double? = nil
     public var minimumValue: Double? = nil
-    public var characterSet: NSCharacterSet? = nil
+    public var characterSet: CharacterSet? = nil
     public var format: String? = nil
 
     public init() { }
@@ -57,8 +57,8 @@ public struct Validation {
 
         if valid {
             if let characterSet = self.characterSet {
-                let stringCharacterSet = NSCharacterSet(charactersIn: string)
-                valid = characterSet.isSuperset(of: stringCharacterSet as CharacterSet)
+                let stringCharacterSet = CharacterSet(charactersIn: string)
+                valid = characterSet.isSuperset(of: stringCharacterSet)
             }
         }
 
