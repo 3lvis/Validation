@@ -108,4 +108,15 @@ class Tests: XCTestCase {
         XCTAssertTrue(validation.validateString("232132"))
         XCTAssertFalse(validation.validateString("elvnume.co"))
     }
+
+    func testCharacterSetWithSpaceValidation() {
+        var validation = Validation()
+        var characterSet = CharacterSet.decimalDigits
+        characterSet.insert(charactersIn: " ")
+        validation.characterSet = characterSet
+
+        XCTAssertTrue(validation.validateString(""))
+        XCTAssertTrue(validation.validateString("5"))
+        XCTAssertFalse(validation.validateString("d"))
+    }
 }
