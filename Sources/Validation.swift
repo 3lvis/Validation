@@ -3,13 +3,13 @@ import Foundation
 public struct Validation {
     public var required = false
     public var minimumLength = 0
-    public var maximumLength: Int? = nil
-    public var maximumValue: Double? = nil
-    public var minimumValue: Double? = nil
-    public var characterSet: CharacterSet? = nil
-    public var format: String? = nil
+    public var maximumLength: Int?
+    public var maximumValue: Double?
+    public var minimumValue: Double?
+    public var characterSet: CharacterSet?
+    public var format: String?
 
-    public init() { }
+    public init() {}
 
     // Making complete false will cause minimumLength, minimumValue and format to be ignored
     // this is useful for partial validations, or validations where the final string is
