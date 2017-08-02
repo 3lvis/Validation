@@ -82,7 +82,7 @@ class Tests: XCTestCase {
 
     func testRequiredValidation() {
         var validation = Validation()
-        validation.required = true
+        validation.minimumLength = 1
 
         XCTAssertTrue(validation.validateString("12345"))
         XCTAssertFalse(validation.validateString(""))
@@ -104,8 +104,9 @@ class Tests: XCTestCase {
     func testCharacterSetValidation() {
         var validation = Validation()
         validation.characterSet = CharacterSet.decimalDigits
+        validation.minimumLength = 1
 
-        XCTAssertTrue(validation.validateString(""))
+        XCTAssertFalse(validation.validateString(""))
         XCTAssertTrue(validation.validateString("232132"))
         XCTAssertFalse(validation.validateString("elvnume.co"))
     }
@@ -115,9 +116,19 @@ class Tests: XCTestCase {
         var characterSet = CharacterSet.decimalDigits
         characterSet.insert(charactersIn: " ")
         validation.characterSet = characterSet
+        validation.minimumLength = 1
 
-        XCTAssertTrue(validation.validateString(""))
+        XCTAssertFalse(validation.validateString(""))
         XCTAssertTrue(validation.validateString("5"))
         XCTAssertFalse(validation.validateString("d"))
+    }
+
+    func testCharacterSetValidationAllowingEmptyStrings() {
+        var validation = Validation()
+        validation.characterSet = CharacterSet.decimalDigits
+
+        XCTAssertTrue(validation.validateString(""))
+        XCTAssertTrue(validation.validateString("232132"))
+        XCTAssertFalse(validation.validateString("elvnume.co"))
     }
 }
