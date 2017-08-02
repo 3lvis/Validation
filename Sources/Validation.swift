@@ -1,7 +1,6 @@
 import Foundation
 
 public struct Validation {
-    public var required = false
     public var minimumLength = 0
     public var maximumLength: Int?
     public var maximumValue: Double?
@@ -16,14 +15,9 @@ public struct Validation {
     // in process of been completed. For example when entering characters into an UITextField
     public func validateString(_ string: String, complete: Bool = true) -> Bool {
         var valid = true
-        var validationMinimumLength = self.minimumLength
 
         if complete {
-            if self.required == true {
-                validationMinimumLength = 1
-            }
-
-            valid = (string.characters.count >= validationMinimumLength)
+            valid = (string.characters.count >= self.minimumLength)
         }
 
         if valid {
