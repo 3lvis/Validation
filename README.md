@@ -4,7 +4,6 @@ A simple type to perform validations on Strings.
 
 ```swift
 struct Validation {
-    var required = false
     var minimumLength = 0
     var maximumLength: Int?
     var maximumValue: Double?
@@ -23,16 +22,6 @@ func validateString(string: String, complete: Bool = true) -> Bool
 ```
 
 ### Examples
-
-#### Required (short hand for minimum value: 1)
-
-```swift
-var validation = Validation()
-validation.required = true
-
-validation.validateString("12345") // => returns true
-validation.validateString("") // => returns false
-```
 
 #### Maximum or/and minimum length
 
