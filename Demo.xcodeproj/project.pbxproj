@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14A139B41AEFC72B00AD732F /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A139B31AEFC72B00AD732F /* Tests.swift */; };
-		254150B61F30931E002B4F20 /* Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = 254150B41F30931E002B4F20 /* Validation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14AE38D31F9D417200F335E8 /* Validation.h in Headers */ = {isa = PBXBuildFile; fileRef = 14AE38D21F9D417200F335E8 /* Validation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		254150B81F309323002B4F20 /* Validation.swift in Headers */ = {isa = PBXBuildFile; fileRef = 14A9C9831CB4F52800754F39 /* Validation.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		254150BA1F3093AA002B4F20 /* Validation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 254150AC1F3092C3002B4F20 /* Validation.framework */; };
 		2581CE201F30943300090525 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A9C9831CB4F52800754F39 /* Validation.swift */; };
@@ -19,13 +19,13 @@
 		146D72B11AB782920058798C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14A139B31AEFC72B00AD732F /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		14A9C9831CB4F52800754F39 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		14AE38D21F9D417200F335E8 /* Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validation.h; sourceTree = "<group>"; };
 		14C0AF7F1BD6D4230009ECBE /* .slather.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .slather.yml; sourceTree = "<group>"; };
 		14C0AF801BD6D4230009ECBE /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		14C0AF811BD6D4230009ECBE /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		14C0AF821BD6D4230009ECBE /* CONTRIBUTING.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CONTRIBUTING.md; sourceTree = "<group>"; };
 		14C0AF831BD6D4230009ECBE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		254150AC1F3092C3002B4F20 /* Validation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		254150B41F30931E002B4F20 /* Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validation.h; sourceTree = "<group>"; };
 		254150B51F30931E002B4F20 /* Validation.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Validation.podspec; sourceTree = "<group>"; };
 		254150B91F309344002B4F20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8568A55DE01CC425CBD8A85 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +92,7 @@
 		14A9C9821CB4F52800754F39 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				14AE38D21F9D417200F335E8 /* Validation.h */,
 				14A9C9831CB4F52800754F39 /* Validation.swift */,
 			);
 			path = Sources;
@@ -101,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				254150B91F309344002B4F20 /* Info.plist */,
-				254150B41F30931E002B4F20 /* Validation.h */,
 				254150B51F30931E002B4F20 /* Validation.podspec */,
 				14C0AF7F1BD6D4230009ECBE /* .slather.yml */,
 				14C0AF801BD6D4230009ECBE /* .travis.yml */,
@@ -127,8 +127,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14AE38D31F9D417200F335E8 /* Validation.h in Headers */,
 				254150B81F309323002B4F20 /* Validation.swift in Headers */,
-				254150B61F30931E002B4F20 /* Validation.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
