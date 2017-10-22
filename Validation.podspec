@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name             = "Validation"
   s.summary          = "Validations for min/max value, min/max length, regex and so on"
-  s.version          = "3.0.0"
+  s.version          = "2.0.0"
   s.homepage         = "https://github.com/3lvis/Validation"
   s.license          = 'MIT'
   s.author           = { "Elvis Nuñez" => "elvisnunez@me.com" }
